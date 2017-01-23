@@ -232,6 +232,7 @@ public class InOutUtils {
         System.out.println("password: "+new String(password));
     }
 
+
     public void csvParser(){
         String line = "";
         String csvSplit = ",";
@@ -287,18 +288,16 @@ public class InOutUtils {
         for (Object[] datatype : datatypes) {
             Row row = sheet.createRow(rowNum++);
             int colNum = 0;
-            for (Object field : datatype) {
+            for (Object column : datatype) {
                 Cell cell = row.createCell(colNum++);
-                if (field instanceof String) {
-                    cell.setCellValue((String) field);
-                } else if (field instanceof Integer) {
-                    cell.setCellValue((Integer) field);
+                if (column instanceof String) {
+                    cell.setCellValue((String) column);
+                } else if (column instanceof Integer) {
+                    cell.setCellValue((Integer) column);
                 }
                 //Add the other instances Byte, Short, Double, Float, Char, Boolean and Formula
-
             }
         }
-
         try {
             FileOutputStream outputStream = new FileOutputStream(XLSX);
             workbook.write(outputStream);
@@ -315,6 +314,7 @@ public class InOutUtils {
             FileInputStream excelFile = new FileInputStream(new File(XLSX));
             Workbook workbook = new XSSFWorkbook(excelFile);
             Sheet datatypeSheet = workbook.getSheetAt(sheet);
+
             Iterator<Row> iterator = datatypeSheet.iterator();
 
             while (iterator.hasNext()) {
@@ -348,13 +348,14 @@ public class InOutUtils {
             if(sheetrow == null){
                 sheetrow = (XSSFRow) datatypeSheet.createRow(row);
             }
-
             currentCell = sheetrow.getCell(col);
+
             if(currentCell == null){
                 currentCell = sheetrow.createCell(col);
             }
 
-            currentCell.setCellValue(newValue);
+            currentCell.setCellValue(Double.parseDouble(newValue));
+
             excelFile.close();
 
             FileOutputStream outExcelFile = new FileOutputStream(XLSX);

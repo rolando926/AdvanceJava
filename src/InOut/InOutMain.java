@@ -14,10 +14,10 @@ public class InOutMain {
         //io.consoleScannerRegexWithSpaces();
         //io.consoleReadUserCredentials();
         //io.csvParser();
-        io.readConfigFromProp();
+        //io.readConfigFromProp();
         //io.createExcelFile();
         //io.readExcelSheet(0);
-        //io.modifyExcelSheetByRowCol(4,2,0,"1");
+        io.modifyExcelSheetByRowCol(4,2,0,"1");
 
         System.out.println("\nThe program is done!");
     }
