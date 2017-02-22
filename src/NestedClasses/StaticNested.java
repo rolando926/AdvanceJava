@@ -9,9 +9,4 @@ public class StaticNested {
             System.out.println("This is my nested class");
         }
     }
-
-    public static void main(String args[]) {
-        StaticNested.Nested_Demo nested = new StaticNested.Nested_Demo();
-        nested.my_method();
-    }
 }

@@ -6,7 +6,8 @@ import java.util.*;
  * Created by RXC8414 on 2/7/2017.
  */
 public class Main {
-    static String[] arry = {"Jean Paul","Britanny","Tom",
+    static String[] arry = {"Apple","Addition","Additional","Addiction"};
+    static String[] arry1 = {"Jean Paul","Britanny","Tom",
             "Sandhya","Archana","Jay","Sravanthi",
             "Kinnari","Rolando","Kimberly"};
     static boolean blnSort = true;

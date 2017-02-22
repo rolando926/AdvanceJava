@@ -5,8 +5,8 @@ package Singleton;
  */
 public class PropertiesMain {
     public static void main(String[] args) {
-        System.out.println("URL = "+PropertyHandler.getInstance().getValue("url"));
+        System.out.println("URL = "+PropertyHandler.getInstance().getValue("URL"));
         System.out.println("Browser = "+PropertyHandler.getInstance().getValue("browser"));
-        System.out.println("Browser = "+PropertyHandler.getInstance().getValue("headerSearchBar"));
+        System.out.println("headerSearchBar = "+PropertyHandler.getInstance().getValue("headerSearchBar"));
     }
 }

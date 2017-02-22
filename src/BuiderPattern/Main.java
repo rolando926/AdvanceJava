@@ -20,6 +20,12 @@ public class Main {
                 .setPhone("770-878-7160")
                 .createBuiderPattern();
 
+        ClassA c = new ClassA.ClassABuilder()
+                .setBlnTrue(true)
+                .setString("Some value")
+                .createClassA();
+
+
         // Print all values from class
         System.out.print(bp);
     }

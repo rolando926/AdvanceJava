@@ -8,8 +8,9 @@ public class dbMain {
 
     public static void main(String[] args) {
         dbUtils db = new dbUtils();
-        //db.getDataSet(strQuery);
-        System.out.println("Record Count = "+db.getRecordCount(strQuery));
+
+        db.getDataSet(strQuery);
+        //System.out.println("Record Count = "+db.getRecordCount(strQuery));
         //db.doUpdateInsert(strQuery);
     }
 }

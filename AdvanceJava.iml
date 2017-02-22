@@ -19,5 +19,6 @@
     <orderEntry type="library" name="poi-ooxml-schemas-3.13-20150929" level="project" />
     <orderEntry type="library" name="poi-scratchpad-3.13-20150929" level="project" />
     <orderEntry type="library" name="curvesapi-1.05" level="project" />
+    <orderEntry type="library" name="mysql-connector-java-5.1.40-bin" level="project" />
   </component>
 </module>

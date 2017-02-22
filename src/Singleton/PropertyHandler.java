@@ -1,9 +1,10 @@
 package Singleton;
 
-import java.io.BufferedReader;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.IOException;
+import java.io.*;
+import java.net.URISyntaxException;
+import java.net.URL;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.Properties;
 
 /**
@@ -11,7 +12,6 @@ import java.util.Properties;
  */
 public class PropertyHandler {
     private static final PropertyHandler instance = new PropertyHandler();
-    private static final String CLASS_PROP = "C:\\AdvanceJava\\src\\InOut\\Resources\\class.properties";
     Properties prop = new Properties();
 
     private PropertyHandler(){
@@ -23,7 +23,7 @@ public class PropertyHandler {
     }
 
     private void readPropertiesFile(){
-        try(FileReader file = new FileReader(CLASS_PROP);
+        try(FileReader file = new FileReader(new File("").getAbsolutePath()+"\\src\\Resources\\class.properties");
             BufferedReader bReader = new BufferedReader(file);){
             prop.load(bReader);
         }catch(FileNotFoundException fnf){
